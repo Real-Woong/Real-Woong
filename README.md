@@ -27,7 +27,7 @@ Goal: **become a strong system builder who designs and ships real products.**
 
 # 🧠 AI Projects
 
-### 📄 Textro
+### 📄 [Textro](https://github.com/Real-Woong/textro)
 Local **Tesseract OCR-based PDF text extraction tool**
 
 - Extract text from scanned administrative documents
@@ -38,7 +38,7 @@ Tech: Python, PyMuPDF, Tesseract OCR
 
 ---
 
-### 🧠 AI-SPOC
+### 📨 [AI-SPOC](https://github.com/Real-Woong/ai-spoc)
 AI-based civil complaint routing system  
 for **2026 Ministry of the Interior and Safety AI Competition**
 
@@ -50,7 +50,7 @@ Tech: Python, NLP, Machine Learning
 
 ---
 
-### 🛡 BlockTroll
+### 🛡 [BlockTroll](https://github.com/Real-Woong/blocktroll)
 AI-based **toxic comment filtering Chrome extension**
 
 - comment toxicity classification
@@ -63,7 +63,7 @@ Tech: Python, NLP, Chrome Extension
 
 # 🌐 Web Projects
 
-### 🍽 HealEat
+### 🍽 [HealEat](https://github.com/Real-Woong/healeat-ios)
 Restaurant recommendation app for **patients with chronic diseases**
 
 Team Project
@@ -76,7 +76,7 @@ Tech: Swift, iOS
 
 ---
 
-### 🛒 UniMade
+### 🛒 [UniMade](https://github.com/Real-Woong/unimade-web)
 Student marketplace platform
 
 Team Project
@@ -91,7 +91,7 @@ Tech: React
 
 # ⛓ Blockchain Projects
 
-### 💰 CryptoFunding
+### 💰 [CryptoFunding](https://github.com/Real-Woong/cryptofunding)
 Blockchain crowdfunding platform
 
 - decentralized funding system
