@@ -80,6 +80,20 @@ Tech: Swift, iOS
 
 ---
 
+### 🫧 [BubbleBreak](https://github.com/Real-Woong/bubblebreak)
+
+Conversation ice-breaking web
+
+Personal Project
+
+- developed a full-stack interactive game using React with Cloudflare Workers and D1 in a unified deployment architecture
+- implemented room-based multiplayer logic, cookie session handling, and event-driven user interaction flows
+- engineered for efficient serverless operation by reducing unnecessary client polling and optimizing request-heavy behaviors
+
+Tech: React, Cloudflare Workers, D1
+
+---
+
 ### 🛒 [UniMade](https://github.com/Real-Woong/unimade-web)
 
 Student marketplace platform
@@ -152,6 +166,7 @@ Tech: Move, Blockchain
 | [HealEat](https://github.com/Real-Woong/healeat-ios) | Disease-based restaurant recommendation app |
 | [UniMade](https://github.com/Real-Woong/unimade-web) | Student marketplace web service |
 | [CryptoFunding](https://github.com/Real-Woong/cryptofunding) | Blockchain crowdfunding platform |
+| [BubbleBreak](https://github.com/Real-Woong/bubblebreak) | Conversation ice-breaking web |
 
 ---
 
