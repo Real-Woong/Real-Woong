@@ -64,6 +64,20 @@ Tech: Python, NLP, Chrome Extension
 
 ---
 
+### 🤖 [Marvis](https://github.com/Real-Woong/marvis)
+
+Personal **AI secretary for idea capture and schedule memory**
+
+- Built to prevent forgotten ideas, tasks, and daily schedules  
+- Telegram-based interface with Gemini-powered responses  
+- Sends both text and Korean TTS audio replies for AirPods/mobile use  
+- Runs 24/7 on an Oracle Cloud Always Free Ubuntu server  
+- Includes JSON-based memory and date-aware schedule organization
+
+Tech: Python, Telegram Bot API, Gemini API, gTTS, Oracle Cloud, systemd
+
+---
+
 # 🌐 Web Projects
 
 ### 🍽 [HealEat](https://github.com/Real-Woong/healeat-ios)
