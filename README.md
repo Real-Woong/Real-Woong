@@ -92,7 +92,7 @@ Tech: Node.js, Toss Securities API, FRED API, Telegram Bot API, Oracle Cloud, sy
 
 ---
 
-# 🌐 Web Projects
+# 🌐 Web & App Projects
 
 ### 🍽 [HealEat](https://github.com/Real-Woong/healeat-ios)
 
@@ -133,6 +133,21 @@ Team Project
 - web-based service
 
 Tech: React
+
+---
+
+### 👩‍❤️‍👨 [Sogon.Zip] (https://github.com/Real-Woong/sogon.zip.git)
+
+Relationship-based private archive app
+
+Personal Project
+
+- private archive service for couples and close friends
+- scheduled message and preference-sharing system
+- account code-based partner connection
+- web-based beta service
+
+Tech: React, TypeScript, Vite, Cloudflare Pages, Cloudflare D1
 
 ---
 
