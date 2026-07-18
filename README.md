@@ -136,7 +136,7 @@ Tech: React
 
 ---
 
-### 👩‍❤️‍👨 [Sogon.Zip] (https://github.com/Real-Woong/sogon.zip.git)
+### 👩‍❤️‍👨 [Sogon.Zip](https://github.com/Real-Woong/sogon.zip.git)
 
 Relationship-based private archive app
 
