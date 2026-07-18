@@ -78,6 +78,20 @@ Tech: Python, Telegram Bot API, Gemini API, gTTS, Oracle Cloud, systemd
 
 ---
 
+### 🧋 [TAPIoca](https://github.com/Real-Woong/TAPIoca.git)
+
+Personal **ETF paper-trading agent powered by Toss API**
+
+- Analyzes portfolio holdings and allocation through the Toss Securities API  
+- Uses FRED macroeconomic data to classify market conditions  
+- Simulates ETF trades with strict risk and exit policies—no live orders  
+- Sends daily portfolio, trade, and performance reports via Telegram  
+- Runs automatically during U.S. market hours on an Oracle Cloud Ubuntu server  
+
+Tech: Node.js, Toss Securities API, FRED API, Telegram Bot API, Oracle Cloud, systemd
+
+---
+
 # 🌐 Web Projects
 
 ### 🍽 [HealEat](https://github.com/Real-Woong/healeat-ios)
