@@ -79,7 +79,7 @@ Tech: Hyperledger Fabric, Sui Move, IFC / BIM, Merkle Tree, REST API
 
 Team Project — *curriculum, demo film, landing page*
 
-- landing page driven by a single content source — write a value and it ships, leave it empty and the section disappears
+- landing page driven by a single content source — write a value and it ships, leave it empty and the section disappears ([build write-up](#-blockthon-2026-landing-page))
 - 74-slide Move curriculum built for first-time Move developers
 - 40-second demo concept: two identical meme cards, one swapped — the record picks the real one
 
@@ -197,6 +197,26 @@ Tech: Python, OpenCV, MediaPipe
 
 # 🌐 Web & App Projects
 
+### 🟪 [BlockThon 2026 Landing Page](https://github.com/Real-Woong/BlockThon2026-RandingPage)
+
+**Interactive landing page for BlockThon 2026 — designed, built, and shipped end to end**
+
+[blockthon.com](https://blockthon.com)
+
+Team Project — *product planning, UI/UX design, frontend architecture, deployment, troubleshooting*
+
+- owned the information architecture, layout, typography, color, and interaction direction — a web experience that carries the event's tone, not a static info page
+- programmatic pixel-art system: shapes converted into pixel data and reusable constants, then generated in code for visual consistency, reuse, and interaction headroom
+- Next.js + TypeScript structure separating content, brand assets, UI components, and interaction logic — a single content source decides what ships
+- used AI as an implementation accelerator while keeping product direction, component boundaries, behavior conditions, and review criteria mine; every generated change verified against the real screen and build
+- static export to Amazon S3 (`blockthon-landing`), delivered worldwide through CloudFront with a custom domain on HTTPS; wrote the bucket policy by hand — a single `s3:GetObject` allow scoped to `blockthon-landing/*` in place of the default deny-all
+- diagnosed a production 403 by comparing CloudFront's Origin Path against the real S3 object key structure: the distribution was asking `blockthon-landing/blockthon-out/` for `index.html`, but the export actually lived one level deeper at `blockthon-landing/blockthon-out/blockthon/` — pointed Origin Path at the real prefix and invalidated the cache
+- moved the distribution off its legacy TLS security policy to `TLSv1.2_2021`, dropping support for outdated protocols and cipher suites
+
+Tech: Next.js, React, TypeScript, CSS Modules, Amazon S3, Amazon CloudFront
+
+---
+
 ### 👩‍❤️‍👨 [Sogon.Zip](https://github.com/Real-Woong/sogon.zip)
 
 Relationship-based private archive app
@@ -310,6 +330,8 @@ Tech: HTML, Cloudflare Workers
 
 <img src="https://img.shields.io/badge/Cloudflare-F38020?style=for-the-badge&logo=cloudflare&logoColor=white"/>
 <img src="https://img.shields.io/badge/Oracle_Cloud-F80000?style=for-the-badge&logo=oracle&logoColor=white"/>
+<img src="https://img.shields.io/badge/Amazon_S3-569A31?style=for-the-badge&logo=amazons3&logoColor=white"/>
+<img src="https://img.shields.io/badge/CloudFront-8C4FFF?style=for-the-badge&logo=amazoncloudfront&logoColor=white"/>
 <img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white"/>
 <img src="https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white"/>
 
@@ -325,6 +347,7 @@ Tech: HTML, Cloudflare Workers
 | [BlockTroll](https://github.com/Real-Woong/block-troll) | KoELECTRA toxic comment filtering extension |
 | [AI-SPOC](https://github.com/Real-Woong/ai-spoc) | NLP-based civil complaint routing system |
 | [Sogon.Zip](https://github.com/Real-Woong/sogon.zip) | Relationship-based private archive service |
+| [BlockThon 2026 Landing Page](https://blockthon.com) | Interactive event landing page on S3 + CloudFront, shipped end to end |
 | [BubbleBreak](https://github.com/Real-Woong/bubblebreak) | Conversation ice-breaking web |
 
 ---
