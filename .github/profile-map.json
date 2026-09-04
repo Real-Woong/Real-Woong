@@ -1,0 +1,53 @@
+{
+  "_comment": [
+    "프로필 README 의 프로젝트 섹션 ↔ SECRETARY 가 아는 프로젝트 경로.",
+    ".github/scripts/check-drift.mjs 가 읽는다.",
+    "",
+    "README 는 각 저장소 _STATUS.md 를 영어 소개문으로 옮겨 적은 *사본* 이다.",
+    "사본이라 어긋나고, 어긋나는 방향은 대체로 아래쪽이다 — 끝낸 일을 프로필이",
+    "스스로 깎아먹는다. 산문은 기계가 못 읽으므로 문장을 대조하지 않는다.",
+    "대신 '원본이 사본보다 나중에 움직였는가' 라는 날짜 하나만 본다.",
+    "",
+    "secretaryIndex 는 이 저장소 기준 상대 경로다. SECRETARY 는 이 기기에만",
+    "있으므로 GitHub Actions 에서는 돌지 않는다. 로컬 전용 도구다."
+  ],
+
+  "secretaryIndex": "../SECRETARY/_index/all_status.json",
+
+  "_sectionsComment": [
+    "키는 README 의 `### ... [제목](url)` 에서 뽑은 제목이다. URL 이 아니라",
+    "제목으로 거는 이유: BlockThon 은 행사 섹션과 랜딩페이지 섹션이 URL 을",
+    "공유하는데, 둘은 다른 글이라 따로 늙는다."
+  ],
+  "sections": {
+    "THE ZONE AGORA":                "Project_Team/Agora_BlockBlock2026Summer",
+    "BuildTrace":                    "Project_BlockChain/BuildTrace",
+    "BlockThon 2026":                "Project_Team/BlockThon_TF",
+    "BlockThon 2026 Landing Page":   "Project_Team/BlockThon_TF",
+    "CryptoFunding":                 "Project_Team/CryptoFunding",
+    "TAPIoca":                       "Project_AI/AI-Agent/toss_AI_Agent",
+    "Marvis":                        "Project_AI/LLM/Marvis",
+    "BlockTroll":                    "Project_AI/NLP/BlockTroll",
+    "AI-SPOC":                       "Project_AI/NLP/행정부AI공모전",
+    "Textro":                        "Project_AI/OCR/Textro",
+    "Hand Gesture Recognition":      "Project_AI/CV/HandGesture",
+    "Realtime Emotion Recognition":  "Project_AI/CV/RealTimeFacialEmotionRecognition",
+    "Hand Music Controller":         "Project_AI/CV/Hand-Music-Controller",
+    "Il-Que":                        "Project_Personal/react/Il-Que",
+    "Sogon.Zip":                     "Project_Personal/App/SogonZip",
+    "BubbleBreak":                   "Project_Personal/react/BubbleBreak",
+    "HealEat":                       "Project_Team/HealEat",
+    "UniMade":                       "Project_Team/UniMade/FE",
+    "Portfolio Web":                 "Project_Personal/react/My-Portfolio-Web"
+  },
+
+  "_unlistedComment": [
+    "SECRETARY 가 진행중·관찰중으로 아는데 README 에 섹션이 없는 프로젝트.",
+    "여기 이유를 적어 두지 않으면 '빠진 것 아니냐' 고 보고된다.",
+    "종료·멈춤은 애초에 안 묻는다 — 프로필에 다 실을 이유가 없다."
+  ],
+  "unlisted": {
+    "Prefer_for_CodingTest": "주 5문제 학습 로그. 프로필에 올릴지는 아직 판단 안 함 — 안 올린 것이 결정은 아니다.",
+    "github-profile": "이 저장소 자신. 프로필이 자기를 소개할 일은 없다."
+  }
+}

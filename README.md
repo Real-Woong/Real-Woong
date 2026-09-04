@@ -98,11 +98,11 @@ Blockchain crowdfunding platform
 
 Team Project
 
-- decentralized funding system
-- smart contract based donations
-- full-stack implementation on Sui
+- decentralized funding system with smart-contract-based donations
+- **first end-to-end build where I wrote every layer myself** — the Move contracts, the backend API, and the frontend
+- Sui Move on chain, a Node.js API over PostgreSQL through Prisma, and a React client
 
-Tech: Move, Sui, TypeScript
+Tech: Sui Move, Node.js, PostgreSQL, Prisma, React, Vite, TypeScript
 
 ---
 
@@ -139,13 +139,14 @@ Tech: Python, Telegram Bot API, Gemini API, gTTS, Oracle Cloud, systemd
 
 ### 🛡 [BlockTroll](https://github.com/Real-Woong/block-troll)
 
-AI-based **toxic comment filtering Chrome extension**
+AI-based **comment filtering Chrome extension** for social feeds
 
-- KoELECTRA-based Korean toxicity classification
-- real-time filtering served from a local inference host — no cloud inference
-- dataset-driven model training
+- KoELECTRA classification across **three classes, not one** — TOXIC (abuse), SPAM (ads and link bait), TAUNT (mockery and sarcasm)
+- matched comments are blurred or hidden in place rather than removed, so the reader decides whether to look
+- FastAPI inference host served over Tailscale from a local machine — **no cloud inference**, the comments never leave the network
+- Manifest V3 extension, dataset-driven model training
 
-Tech: Python, KoELECTRA, NLP, Chrome Extension
+Tech: Python, FastAPI, KoELECTRA, Transformers, Chrome Extension MV3, Tailscale
 
 ---
 
@@ -178,17 +179,17 @@ Tech: Python, PyMuPDF, Tesseract OCR
 
 ### ✋ [Hand Gesture Recognition](https://github.com/Real-Woong/hand-gesture-recognition)
 
-Real-time hand gesture recognition
+Real-time hand gesture recognition from a webcam — a detected gesture (V sign / middle finger / open palm) puts a different image on screen
 
-Tech: Python, OpenCV, CVZone
+Tech: Python, OpenCV, CVZone, MediaPipe
 
 ---
 
 ### 😀 [Realtime Emotion Recognition](https://github.com/Real-Woong/realtime-emotion-recognition)
 
-Real-time facial emotion recognition
+Real-time facial emotion recognition — DeepFace reads the emotion, and a shape you pick (circle / square / triangle) is overlaid on the face
 
-Tech: Python, OpenCV, DeepFace
+Tech: Python, OpenCV, DeepFace, TensorFlow
 
 ---
 
@@ -249,16 +250,17 @@ Personal Project
 - account code-based partner connection
 - web-based beta service
 
-Tech: React, TypeScript, Vite, Cloudflare Pages, Cloudflare D1
+Tech: React, TypeScript, Vite, Cloudflare Pages, Cloudflare Workers, Cloudflare D1
 
 ---
 
 ### 🫧 [BubbleBreak](https://github.com/Real-Woong/bubblebreak)
 
-Conversation ice-breaking web
+Conversation ice-breaking web that finds what two people actually share
 
 Personal Project
 
+- people join the same room and build **interest bubbles**, then pop each other's to surface a real thing to talk about — the output is a conversation topic, not a score
 - developed a full-stack interactive game using React with Cloudflare Workers and D1 in a unified deployment architecture
 - implemented room-based multiplayer logic, cookie session handling, and event-driven user interaction flows
 - engineered for efficient serverless operation by reducing unnecessary client polling and optimizing request-heavy behaviors
