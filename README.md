@@ -35,7 +35,7 @@ Goal: **become a strong system builder who designs and ships real products.**
 | [Il-Que](https://github.com/Real-Woong/il-que) | RPG-style macOS quest widget — learning product and interaction design through Figma, React, and Tauri |
 | [TAPIoca](https://github.com/Real-Woong/TAPIoca) | Running **live execution since 2026-09-01** under fixed risk limits |
 | [THE ZONE AGORA](https://github.com/TheZoneAgora/contract) | Sui Vault + DeepBook v3 execution engine — BlockBlock 2026 Summer |
-| [BuildTrace](https://github.com/Real-Woong/BuildTrace) | BIM provenance ledger on Hyperledger Fabric, anchored to a public chain |
+| [BuildTrace](https://github.com/Real-Woong/BuildTrace) | Runnable proof demo shipped — dispute resolution over signed BIM events, 11 tests green; next is the Fabric adapter |
 | [BlockThon 2026](https://github.com/Real-Woong/BlockThon2026-RandingPage) | Sui·Walrus hacker house — landing page, curriculum, demo film |
 | [Sogon.Zip](https://github.com/Real-Woong/sogon.zip) | Relationship archive service — beta hardening |
 
@@ -53,6 +53,7 @@ Team Project — *Sui Contract / Vault / Execution Agent*
 - DeepBook v3 order routing behind an adapter boundary with a 10bps protocol fee
 - execution agent that verifies signals before they ever touch the chain
 - x402 payment-gated signal endpoint (GraphQL / gRPC after the JSON-RPC sunset)
+- HMAC-SHA256 on the executor's inbound endpoint — a missing or wrong signature gets a 401, closing an entry point that could otherwise trigger a real trade
 - Move 70/70 and npm 54/54 tests green, deployed on Sui testnet
 
 Tech: Sui Move, DeepBook v3, TypeScript SDK, Node.js, x402, GraphQL, gRPC
@@ -66,12 +67,14 @@ Tech: Sui Move, DeepBook v3, TypeScript SDK, Node.js, x402, GraphQL, gRPC
 Team Project
 
 - links change, release, review, and approval history with hashes and signatures
-- Hyperledger Fabric permissioned consortium network as the base ledger
-- Merkle roots selectively anchored to a public chain (hybrid design)
+- **runnable dependency-free Node.js proof demo** for the dispute "who received V11?" — streaming SHA-256 over V10/V11, a canonical manifest, and Ed25519-signed events from three organizations
+- Merkle inclusion proofs over the event log, tamper detection on both files and leaves, and citation-first answers that **abstain when the evidence is not there**
+- **11 automated tests green, covering the attack paths too** — unauthorized approval, duplicate events, a tampered file, a tampered Merkle leaf, abstention on a question of legal liability
+- Hyperledger Fabric permissioned consortium network as the base ledger, with Merkle roots selectively anchored to a public chain (hybrid design)
 - BIM originals stay off-chain in CDE / S3 — only identifiers, hashes, and events on-ledger
 - separate experimental track comparing `BIM Object ↔ Sui Object` mapping
 
-Tech: Hyperledger Fabric, Sui Move, IFC / BIM, Merkle Tree, REST API
+Tech: Node.js, Ed25519, Hyperledger Fabric, Sui Move, IFC / BIM, Merkle Tree
 
 ---
 
@@ -298,7 +301,14 @@ Personal portfolio deployed on Cloudflare Workers
 
 [real-woong-portfolio-web.jinung344.workers.dev](https://real-woong-portfolio-web.jinung344.workers.dev/)
 
-Tech: HTML, Cloudflare Workers
+Personal Project
+
+- every project write-up has **one source** — `content/projects/*.json` — and a build step generates the page from it; a `--check` mode exits non-zero when the generated page and the source disagree
+- fix counts are **counted from the defect log**, never typed, so a badge cannot claim more than the log records
+- a status checker cross-references each project's `_STATUS.md` against the site's own labels and reports only the combinations that actually contradict — the two vocabularies are different axes, so it does not overwrite either
+- bilingual KO/EN, with a test that fails on any Korean string shipped without a translation
+
+Tech: Next.js, React, TypeScript, Tailwind, Cloudflare Workers
 
 ---
 
