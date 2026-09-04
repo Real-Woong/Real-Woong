@@ -22,6 +22,7 @@ Currently focusing on:
 - Sui Move smart contracts & DeFi infrastructure
 - provenance and verifiable audit systems
 - NLP systems and workflow automation
+- desktop product design and interaction prototyping
 
 Goal: **become a strong system builder who designs and ships real products.**
 
@@ -31,7 +32,8 @@ Goal: **become a strong system builder who designs and ships real products.**
 
 | Project | What's happening now |
 |--------|----------------------|
-| [TAPIoca](https://github.com/Real-Woong/TAPIoca) | Moving from paper trading to **live execution (2026-09)** under strict risk limits |
+| [Il-Que](https://github.com/Real-Woong/il-que) | RPG-style macOS quest widget — learning product and interaction design through Figma, React, and Tauri |
+| [TAPIoca](https://github.com/Real-Woong/TAPIoca) | Running **live execution since 2026-09-01** under fixed risk limits |
 | [THE ZONE AGORA](https://github.com/TheZoneAgora/contract) | Sui Vault + DeepBook v3 execution engine — BlockBlock 2026 Summer |
 | [BuildTrace](https://github.com/Real-Woong/BuildTrace) | BIM provenance ledger on Hyperledger Fabric, anchored to a public chain |
 | [BlockThon 2026](https://github.com/Real-Woong/BlockThon2026-RandingPage) | Sui·Walrus hacker house — landing page, curriculum, demo film |
@@ -110,7 +112,7 @@ Personal **ETF trading agent powered by the Toss Securities API**
 - combines trend, MACD, news sentiment, and macro signals into target weights
 - FRED macroeconomic data classifies the market regime
 - validated against a PAPER ledger and historical backtests before any live order
-- **transitioning to live execution in 2026-09**, under fixed per-order, daily, and total-loss limits
+- **running live execution since 2026-09-01**, under fixed per-order, daily, and total-loss limits
 - daily portfolio, trade, and performance reports over Telegram
 - runs automatically during U.S. market hours on an Oracle Cloud Ubuntu server
 
@@ -196,6 +198,22 @@ Tech: Python, OpenCV, MediaPipe
 ---
 
 # 🌐 Web & App Projects
+
+### 🎮 [Il-Que](https://github.com/Real-Woong/il-que)
+
+**RPG-style daily quest widget for macOS**
+
+Personal toy project for learning visual and interaction design through Figma while turning the designs into a native desktop product.
+
+- reframes everyday tasks as a game Quest Helper / Quest Tracker instead of a conventional to-do list
+- frameless, always-on-top desktop HUD with dynamic window sizing and native drag, minimize, and close behavior
+- functional Maple-inspired MVP with single/count quests, explicit completion, progress controls, and theme selection
+- separate Lost Ark and Genshin visual directions planned on top of shared quest logic
+- non-commercial public release planned with original, license-safe assets and fonts
+
+Tech: Tauri 2, React 19, TypeScript, Vite, Rust, Figma
+
+---
 
 ### 🟪 [BlockThon 2026 Landing Page](https://github.com/Real-Woong/BlockThon2026-RandingPage)
 
@@ -296,6 +314,7 @@ Tech: HTML, Cloudflare Workers
 <img src="https://img.shields.io/badge/Java-007396?style=for-the-badge&logo=openjdk&logoColor=white"/>
 <img src="https://img.shields.io/badge/C-A8B9CC?style=for-the-badge&logo=c&logoColor=black"/>
 <img src="https://img.shields.io/badge/C++-00599C?style=for-the-badge&logo=cplusplus&logoColor=white"/>
+<img src="https://img.shields.io/badge/Rust-000000?style=for-the-badge&logo=rust&logoColor=white"/>
 
 ---
 
@@ -323,6 +342,7 @@ Tech: HTML, Cloudflare Workers
 <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB"/>
 <img src="https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white"/>
 <img src="https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white"/>
+<img src="https://img.shields.io/badge/Tauri-24C8DB?style=for-the-badge&logo=tauri&logoColor=white"/>
 
 ---
 
@@ -341,8 +361,9 @@ Tech: HTML, Cloudflare Workers
 
 | Project | Description |
 |--------|-------------|
+| [Il-Que](https://github.com/Real-Woong/il-que) | RPG-style macOS quest widget designed in Figma and built with Tauri + React |
 | [THE ZONE AGORA](https://github.com/TheZoneAgora/contract) | Non-custodial Sui trading vault with DeepBook v3 execution |
-| [TAPIoca](https://github.com/Real-Woong/TAPIoca) | ETF trading agent going live under strict risk limits |
+| [TAPIoca](https://github.com/Real-Woong/TAPIoca) | ETF trading agent running live under strict risk limits |
 | [BuildTrace](https://github.com/Real-Woong/BuildTrace) | BIM provenance ledger on Hyperledger Fabric |
 | [BlockTroll](https://github.com/Real-Woong/block-troll) | KoELECTRA toxic comment filtering extension |
 | [AI-SPOC](https://github.com/Real-Woong/ai-spoc) | NLP-based civil complaint routing system |
@@ -378,6 +399,7 @@ Tech: HTML, Cloudflare Workers
 - Verifiable Provenance & Audit Systems
 - System Design
 - Workflow Automation
+- Product & Interaction Design
 
 ---
 
