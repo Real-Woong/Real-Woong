@@ -117,6 +117,9 @@ Personal **ETF trading agent powered by the Toss Securities API**
 - FRED macroeconomic data classifies the market regime
 - validated against a PAPER ledger and historical backtests before any live order
 - **running live execution since 2026-09-01**, under fixed per-order, daily, and total-loss limits
+- **passed the initial build-up ramp gate on 2026-09-09** — target shortfall −$0.0051, 0 of 26 cycles short
+- the daily report prints the real brokerage account next to the PAPER ledger and matches the app to within one cent
+- whether live execution continues is decided on 2026-09-30 against criteria fixed in advance — P&L is not one of them
 - daily portfolio, trade, and performance reports over Telegram
 - runs automatically during U.S. market hours on an Oracle Cloud Ubuntu server
 
