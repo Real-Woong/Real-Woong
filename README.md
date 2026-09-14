@@ -35,7 +35,7 @@ Goal: **become a strong system builder who designs and ships real products.**
 | [Il-Que](https://github.com/Real-Woong/il-que) | RPG-style macOS quest widget — learning product and interaction design through Figma, React, and Tauri |
 | [TAPIoca](https://github.com/Real-Woong/TAPIoca) | Running **live execution since 2026-09-01** under fixed risk limits |
 | [THE ZONE AGORA](https://github.com/TheZoneAgora/contract) | Sui Vault + DeepBook v3 execution engine — BlockBlock 2026 Summer |
-| [BuildTrace](https://github.com/Real-Woong/BuildTrace) | Runnable proof demo shipped — dispute resolution over signed BIM events, 11 tests green; next is the Fabric adapter |
+| [BuildTrace](https://github.com/Real-Woong/BuildTrace) | IFC4 parser and Walrus-anchored evidence shipped, 26 tests green, [live demo](https://buildtrace-demo.pages.dev); next is checking canonicalization on real Revit / ArchiCAD exports |
 | [BlockThon 2026](https://github.com/Real-Woong/BlockThon2026-RandingPage) | Sui·Walrus hacker house — landing page, curriculum, demo film |
 | [Sogon.Zip](https://github.com/Real-Woong/sogon.zip) | Relationship archive service — beta hardening |
 
@@ -64,17 +64,18 @@ Tech: Sui Move, DeepBook v3, TypeScript SDK, Node.js, x402, GraphQL, gRPC
 
 **Provenance infrastructure for multi-organization BIM workflows**
 
-Team Project
+Team Project · [Live demo](https://buildtrace-demo.pages.dev)
 
 - links change, release, review, and approval history with hashes and signatures
-- **runnable dependency-free Node.js proof demo** for the dispute "who received V11?" — streaming SHA-256 over V10/V11, a canonical manifest, and Ed25519-signed events from three organizations
+- **runnable dependency-free Node.js proof** for the dispute "who received V11?" — streaming SHA-256 over V10/V11 and Ed25519-signed events from three organizations
+- **dependency-free IFC4 parser** extracts the object manifest straight from the file — re-save noise (entity numbers, timestamps, whitespace) keeps `manifest_hash` stable, a real dimension change moves it
 - Merkle inclusion proofs over the event log, tamper detection on both files and leaves, and citation-first answers that **abstain when the evidence is not there**
-- **11 automated tests green, covering the attack paths too** — unauthorized approval, duplicate events, a tampered file, a tampered Merkle leaf, abstention on a question of legal liability
-- Hyperledger Fabric permissioned consortium network as the base ledger, with Merkle roots selectively anchored to a public chain (hybrid design)
-- BIM originals stay off-chain in CDE / S3 — only identifiers, hashes, and events on-ledger
-- separate experimental track comparing `BIM Object ↔ Sui Object` mapping
+- **evidence bundle anchored on Walrus testnet** — the blob is a Sui object owned by the demo wallet, then downloaded back and checked against the Merkle root
+- **26 automated tests green, covering the attack paths too** — unauthorized approval, duplicate events, a tampered file, a tampered Merkle leaf, abstention on a question of legal liability
+- split into this public web demo (Cloudflare Pages) and a private verification repo; the demo's numbers come from the verifier's audit report
+- designed around a Hyperledger Fabric permissioned consortium with Merkle roots selectively anchored to a public chain — BIM originals stay off-chain in CDE / S3
 
-Tech: Node.js, Ed25519, Hyperledger Fabric, Sui Move, IFC / BIM, Merkle Tree
+Tech: Node.js, Ed25519, IFC4, Merkle Tree, Walrus, Sui, Hyperledger Fabric
 
 ---
 
@@ -129,11 +130,13 @@ Personal **AI secretary for idea capture and schedule memory**
 
 - Built to prevent forgotten ideas, tasks, and daily schedules
 - Telegram-based interface with Gemini-powered responses
-- Sends both text and Korean TTS audio replies for AirPods/mobile use
-- Runs 24/7 on an Oracle Cloud Always Free Ubuntu server
-- Includes JSON-based memory and date-aware schedule organization
+- **One morning briefing message** — today's to-dos plus the next step of every active project
+- Project state is read from local status documents, and edits made over Telegram are **written back to those files** — if the file can't be updated, nothing is saved and the user is told
+- Storage moved from JSON to **SQLite**; the Telegram and Siri webhook flows now share a single core path, with a tool surface, an agent loop, and an LLM router running in shadow mode next to the rule-based one
+- Runs 24/7 on a **Mac mini under launchd** (migrated from Oracle Cloud)
+- Korean TTS voice replies are available but off by default
 
-Tech: Python, Telegram Bot API, Gemini API, gTTS, Oracle Cloud, systemd
+Tech: Python 3.12, python-telegram-bot, SQLite, Gemini API, gTTS, launchd
 
 ---
 
@@ -376,7 +379,7 @@ Tech: Next.js, React, TypeScript, Tailwind, Cloudflare Workers
 | [Il-Que](https://github.com/Real-Woong/il-que) | RPG-style macOS quest widget designed in Figma and built with Tauri + React |
 | [THE ZONE AGORA](https://github.com/TheZoneAgora/contract) | Non-custodial Sui trading vault with DeepBook v3 execution |
 | [TAPIoca](https://github.com/Real-Woong/TAPIoca) | ETF trading agent running live under strict risk limits |
-| [BuildTrace](https://github.com/Real-Woong/BuildTrace) | BIM provenance ledger on Hyperledger Fabric |
+| [BuildTrace](https://github.com/Real-Woong/BuildTrace) | BIM provenance proof — signed events, Merkle proofs, Walrus-anchored evidence |
 | [BlockTroll](https://github.com/Real-Woong/block-troll) | KoELECTRA toxic comment filtering extension |
 | [AI-SPOC](https://github.com/Real-Woong/ai-spoc) | NLP-based civil complaint routing system |
 | [Sogon.Zip](https://github.com/Real-Woong/sogon.zip) | Relationship-based private archive service |
