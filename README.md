@@ -395,9 +395,8 @@ Tech: Next.js, React, TypeScript, Tailwind, Cloudflare Workers
 
 <div align="center">
 
-<img height="165" src="https://github-readme-stats.vercel.app/api?username=Real-Woong&show_icons=true&theme=tokyonight&hide_border=true"/>
-
-<img height="165" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Real-Woong&layout=compact&theme=tokyonight&hide_border=true"/>
+<img height="165" src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=Real-Woong&theme=tokyonight" alt="Jinwoong's GitHub statistics"/>
+<img height="165" src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=Real-Woong&theme=tokyonight" alt="Jinwoong's repositories per language"/>
 
 </div>
 
@@ -405,7 +404,11 @@ Tech: Next.js, React, TypeScript, Tailwind, Cloudflare Workers
 
 # 📈 GitHub Activity
 
-[![Jinwoong's github activity graph](https://github-readme-activity-graph.vercel.app/graph?username=Real-Woong&theme=tokyo-night)](https://github.com/Real-Woong)
+<div align="center">
+
+[![Jinwoong's GitHub contribution activity](https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=Real-Woong&theme=tokyonight)](https://github.com/Real-Woong)
+
+</div>
 
 ---
 
