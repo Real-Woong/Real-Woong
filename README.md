@@ -145,6 +145,21 @@ Tech: Python 3.12, python-telegram-bot, SQLite, Gemini API, gTTS, launchd
 
 ---
 
+### 📰 [card-news-factory](https://github.com/Real-Woong/card-news-factory)
+
+**Verified AI card-news pipeline** — collect → fact-check → carousel → approval gates → Instagram. The LLM only writes text; code owns layout, approval, and publishing.
+
+- six layers between a model's sentence and a published post: fact-check verdict, per-sentence grounding judge, auto-repair, independent reviewer, approval gate, and publisher guards
+- code re-validates the model at every step — cited evidence must exist, and new numbers, URLs, or internal wording added during repair are rejected
+- if the LLM provider fails the run fails loudly; there is no mock fallback that could post made-up text
+- deterministic design from HTML/CSS templates, with WCAG-checked contrast and a deck-wide type scale
+- unattended weekly operation with a pause switch, daily cap, token refresh, and API pre-checks; it has published to a live Instagram account
+- 800+ tests run offline; automatic posting is OFF by default
+
+Tech: Python, LLM adapters (Kiro CLI / OpenAI / Anthropic), HTML/CSS rendering, Instagram API, launchd
+
+---
+
 ### 🛡 [BlockTroll](https://github.com/Real-Woong/block-troll)
 
 AI-based **comment filtering Chrome extension** for social feeds
